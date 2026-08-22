@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="skill-finder mark">
+  <rect x="0" y="0" width="48" height="48" fill="#FFFFFF"/>
+  <rect x="3" y="3" width="42" height="42" fill="none" stroke="#141414" stroke-width="2.5"/>
+  <g stroke="#141414" stroke-linecap="round">
+    <path d="M17 15 H34" stroke-width="2" opacity="0.32"/>
+    <path d="M17 24 H39" stroke-width="3"/>
+    <path d="M17 33 H34" stroke-width="2" opacity="0.32"/>
+  </g>
+  <circle cx="11" cy="15" r="2.2" fill="none" stroke="#141414" stroke-width="1.8" opacity="0.32"/>
+  <circle cx="11" cy="24" r="2.4" fill="#141414"/>
+  <circle cx="11" cy="33" r="2.2" fill="none" stroke="#141414" stroke-width="1.8" opacity="0.32"/>
+</svg>
