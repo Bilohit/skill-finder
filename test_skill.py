@@ -40,6 +40,15 @@ def test_no_birthplace_terms_survive():
         assert term not in text, f"{term!r} is workspace-specific and must not ship"
 
 
+def test_no_birthplace_terms_in_the_public_docs_either():
+    """The same leak can land in the pages a stranger reads before the skill --
+    README, CONTRIBUTING and docs/ -- which the SKILL.md scan above never sees."""
+    for rel in ("README.md", "CONTRIBUTING.md", "docs/concepts.md", "docs/walkthrough.md"):
+        text = (ROOT / rel).read_text(encoding="utf-8")
+        for term in BIRTHPLACE_TERMS:
+            assert term not in text, f"{term!r} is workspace-specific and must not ship in {rel}"
+
+
 def test_frontmatter_name_matches_the_plugin():
     text = SKILL.read_text(encoding="utf-8")
     assert text.startswith("---\n")

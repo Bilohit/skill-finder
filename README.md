@@ -1,4 +1,7 @@
-![skill-finder](assets/banner.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/banner-dark.svg">
+  <img src="assets/banner.svg" alt="skill-finder">
+</picture>
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Plugin](https://img.shields.io/badge/plugin-skill--finder-informational.svg)
@@ -122,6 +125,13 @@ skills from its answer.
 Never dispatch a general-purpose agent to read a skill catalog. That was this skill's original
 design, and it was wrong.
 
+## Going deeper
+
+- [docs/walkthrough.md](docs/walkthrough.md) -- one worked example, from install through the first
+  substantive request of a session
+- [docs/concepts.md](docs/concepts.md) -- the vocabulary skill-finder uses, and what each term
+  means in the skill itself
+
 ## Requirements
 
 Claude Code, or any agent harness that loads Claude Code plugins. The skill is a single markdown
@@ -136,6 +146,17 @@ are all original work, released under the MIT license -- see `LICENSE`.
 If that ever changes -- a dependency gets added, a file gets vendored, wording gets lifted from
 somewhere else -- it is credited right here with an upstream URL and an author's name, never
 included silently.
+
+## Related
+
+skill-finder is one of three sibling plugins, one product per repository, each installable on its
+own:
+
+| Repo | What it does |
+|---|---|
+| [flow-review](https://github.com/Bilohit/flow-review) | drives your product end to end like a first-time user and returns ranked findings plus a design critique |
+| skill-finder (this repo) | picks a session's skill loadout deliberately -- reads no files, spawns no agents |
+| [build-state](https://github.com/Bilohit/build-state) | imprints a `/boot` you can trust: session continuity from a computed baton, an append-only ledger and a verification ladder |
 
 ## Contributing
 

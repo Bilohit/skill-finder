@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="skill-finder banner (dark)">
+  <rect x="0" y="0" width="1200" height="260" fill="#0D0D0D"/>
+  <rect x="1" y="1" width="1198" height="258" fill="none" stroke="#F2F2F2" stroke-width="2"/>
+  <g transform="translate(60,60)">
+    <rect x="0" y="0" width="140" height="140" fill="none" stroke="#F2F2F2" stroke-width="4"/>
+    <g stroke="#F2F2F2" stroke-linecap="round">
+      <path d="M50 44 H99" stroke-width="5.5" opacity="0.32"/>
+      <path d="M50 70 H114" stroke-width="8.5"/>
+      <path d="M50 96 H99" stroke-width="5.5" opacity="0.32"/>
+    </g>
+    <circle cx="32" cy="44" r="6.4" fill="none" stroke="#F2F2F2" stroke-width="5" opacity="0.32"/>
+    <circle cx="32" cy="70" r="7" fill="#F2F2F2"/>
+    <circle cx="32" cy="96" r="6.4" fill="none" stroke="#F2F2F2" stroke-width="5" opacity="0.32"/>
+  </g>
+  <text x="240" y="130" font-family="monospace, sans-serif" font-size="72" font-weight="700"
+        fill="#F2F2F2">skill-finder</text>
+  <text x="242" y="172" font-family="monospace, sans-serif" font-size="22" letter-spacing="1"
+        fill="#F2F2F2">read nothing. spawn nothing. pick well.</text>
+  <line x1="240" y1="190" x2="1140" y2="190" stroke="#F2F2F2" stroke-width="2"/>
+</svg>

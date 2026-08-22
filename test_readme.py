@@ -25,11 +25,15 @@ def test_readme_carries_both_install_lines():
     assert "/plugin install skill-finder" in text
 
 
-def test_readme_opens_with_the_banner():
-    """The banner is the first thing rendered on the repository page. A README that
-    stops referencing it does not fail anywhere else -- the image simply vanishes."""
-    first = README.read_text(encoding="utf-8").lstrip().splitlines()[0]
-    assert first == "![skill-finder](assets/banner.svg)", first
+def test_readme_opens_with_the_theme_aware_banner():
+    """The banner is the first thing rendered on the repository page, and the <picture>
+    element is what serves the dark variant. If either reference goes, the image simply
+    vanishes on one theme without failing anywhere else."""
+    text = README.read_text(encoding="utf-8")
+    assert text.lstrip().startswith("<picture>"), "README does not open with <picture>"
+    head = text[:400]
+    assert "assets/banner-dark.svg" in head
+    assert "assets/banner.svg" in head
 
 
 def test_readme_states_the_problem_and_is_not_a_stub():
@@ -70,6 +74,15 @@ def test_svgs_are_dark_ink_on_an_explicit_white_plate():
         assert "currentColor" not in text, f"{name} inherits its ink onto a white plate"
         assert 'fill="#FFFFFF"' in text, f"{name} has no white plate"
         assert "#141414" in text, f"{name} does not use the fixed ink"
+
+
+def test_dark_banner_is_light_ink_on_an_explicit_dark_plate():
+    """The dark variant is served by the README's <picture> element on dark GitHub
+    themes; the same fixed-ink rule applies with the roles reversed."""
+    text = (ROOT / "assets" / "banner-dark.svg").read_text(encoding="utf-8")
+    assert "currentColor" not in text, "banner-dark.svg inherits its ink"
+    assert 'fill="#0D0D0D"' in text, "banner-dark.svg has no dark plate"
+    assert "#F2F2F2" in text, "banner-dark.svg does not use the light ink"
 
 
 def test_no_emoji_in_any_root_document():
