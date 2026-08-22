@@ -1,0 +1,11 @@
+{
+  "name": "skill-finder",
+  "version": "1.0.0",
+  "description": "A zero-read skill selection discipline. The skill list and the project rules are already in context, so choosing a loadout should read nothing and spawn nothing.",
+  "author": {
+    "name": "Bilohit",
+    "url": "https://github.com/Bilohit"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Bilohit/skill-finder"
+}

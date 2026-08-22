@@ -1,0 +1,14 @@
+{
+  "name": "skill-finder",
+  "owner": {
+    "name": "Bilohit",
+    "url": "https://github.com/Bilohit"
+  },
+  "plugins": [
+    {
+      "name": "skill-finder",
+      "source": "./plugins/skill-finder",
+      "description": "Pick a session's skill loadout deliberately instead of by reflex. Reads no files and spawns no agents."
+    }
+  ]
+}
